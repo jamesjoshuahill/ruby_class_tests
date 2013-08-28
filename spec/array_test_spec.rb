@@ -27,6 +27,12 @@ describe Array do
       end
     end
 
+    context 'map method should return' do
+       it 'a new array with each value processed by the specified block' do
+        (1..5).to_a.map {|elem| "dog" }.should eq ['dog', 'dog', 'dog', 'dog', 'dog']
+        %w(margo josh jodie sam).map {|name| name.capitalize}.should eq ['Margo', 'Josh','Jodie', 'Sam']
+       end
+    end
   end
 
 end
